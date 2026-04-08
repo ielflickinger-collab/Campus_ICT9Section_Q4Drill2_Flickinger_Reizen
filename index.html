@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Heat Checker</title>
+</head>
+<style>
+	body{
+		text-align: center;
+		background-color:black ;
+		color: white;
+
+	}
+
+	input, select, textarea{
+        width: 25%;
+        padding: 8px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 14px;
+    }
+
+   	.showHeat{
+		color: black;
+		border: 2px black;
+		padding: 20px;
+		box-shadow: 0 4px 8px;
+		background-color: black;
+		color: white;
+		font-size: 25px;
+		border-radius: 1000px;
+		text-align: center;
+	}
+</style>
+<body>
+	<input type="number" id="dayInput">
+	<button onclick="showDay()">CHECK DAY</button>
+
+	<h3 id="result"></h3>
+
+	<h2>Input Heat Level</h2>
+
+	<h3>...I couldn't figure out the thing so its just 1-5</h3>
+
+	<script>
+
+		function showDay(){
+			var day = parseInt(document.getElementById("dayInput").value);
+
+			var assignedDay;
+
+			switch(day){
+				case 1:
+					assignedDay= "ey dis kinda chill lwk";
+					break;
+				case 2:
+					assignedDay= "light work no reaction";
+					break;
+				case 3:
+					assignedDay= "...alright its got a bit of kick to it";
+					break;
+				case 4:
+					assignedDay= "...DAEYUM.....";
+					break;
+				case 5:
+					assignedDay= "The darkest pits of hell have opened. Cower. Fear. May the heat reach you, before he does.";
+					break;
+				default:
+					assignedDay = "The world ended <3"
+			}
+			document.getElementById("result").innerHTML = assignedDay;
+		}
+	</script>
+
+</body>
+</html>
